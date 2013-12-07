@@ -1,0 +1,18 @@
+apply plugin: "groovy"
+apply plugin: "application"
+apply plugin: 'eclipse'
+
+mainClassName = "Main"
+
+repositories {
+    mavenCentral()
+    maven {
+        url "https://swt-repo.googlecode.com/svn/repo/"
+    }
+}
+
+dependencies {
+    compile 'org.codehaus.groovy:groovy-all:2.2.1'
+    compile 'org.eclipse.swt:org.eclipse.swt.gtk.linux.x86_64:4.3'
+}
+
