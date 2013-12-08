@@ -1,0 +1,25 @@
+// This script uses $HOME/qtjambi as home dir for qtjambi
+def qtjambi_install_dir="$System.env.HOME/qtjambi"
+
+
+apply plugin: "application"
+apply plugin: "groovy"
+
+mainClassName = "Main"
+
+repositories {
+    mavenCentral()
+    maven {
+        url "http://qtjambi.sourceforge.net/maven2/"
+    }
+}
+
+dependencies {
+    compile 'org.codehaus.groovy:groovy-all:2.2.1'
+    compile 'net.sf.qtjambi:qtjambi-base-linux64:4.6.3'
+}
+
+run {
+    environment "LD_LIBRARY_PATH", "$qtjambi_install_dir/lib"
+    environment "QT_PLUGIN_PATH", "$qtjambi_install_dir/plugins"
+}
