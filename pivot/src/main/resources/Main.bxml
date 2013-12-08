@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window title="Borders" maximized="true"
+    xmlns:bxml="http://pivot.apache.org/bxml"
+    xmlns="org.apache.pivot.wtk">
+    <TablePane styles="{horizontalSpacing:10}">
+        <columns>
+            <TablePane.Column width="1*"/>
+            <TablePane.Column width="1*"/>
+        </columns>
+
+        <TablePane.Row height="1*">
+            <Border title="Border 1" styles="{padding:2}">
+                <Label text="Default border with title"
+                    styles="{horizontalAlignment:'center', verticalAlignment:'center', wrapText:true}"/>
+            </Border>
+            <Border styles="{color:'#ff0000', titleColor:'#000000', thickness:10,
+                cornerRadii:20, padding:2}">
+                <Label text="Custom border with 10-pixel thick red border, rounded corners, and no title"
+                    styles="{horizontalAlignment:'center', verticalAlignment:'center', wrapText:true}"/>
+            </Border>
+        </TablePane.Row>
+    </TablePane>
+</Window>

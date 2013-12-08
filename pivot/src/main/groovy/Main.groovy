@@ -1,6 +1,7 @@
 import java.awt.Color
 import java.awt.Font
 
+import org.apache.pivot.beans.*
 import org.apache.pivot.collections.*
 import org.apache.pivot.wtk.*
 
@@ -9,17 +10,8 @@ class Main implements Application {
 
     @Override
     public void startup(Display display, Map<String, String> properties) {
-        def label = new Label()
-        label.text = "Hello world"
-        label.styles.put("font", new Font("Arial", Font.BOLD, 24))
-        label.styles.put("color", Color.RED)
-        label.styles.put("horizontalAlignment", HorizontalAlignment.CENTER)
-        label.styles.put("verticalAlignment", VerticalAlignment.CENTER)
-
-        window = new Window()
-        window.content = label
-        window.title = "Hello world"
-        window.maximized = true
+        def serializer = new BXMLSerializer()
+        window = serializer.readObject(Main.class, "Main.bxml") as Window
         window.open(display)
     }
 
