@@ -1,1 +1,9 @@
-# Proof of Concept of different GUI toolkits for JAVA
+# Proof of Concept of different GUI toolkits for Groovy
+The objective is to develop the same basic application with different toolkits to compere their
+performance and ease of use.
+
+Graphic toolkits:
+* Eclipse SWT www.eclipse.org/swt
+* Apache Pivot http://pivot.apache.com
+* QT Jambi http://qt-jambi.org/
+
