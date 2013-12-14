@@ -1,0 +1,17 @@
+apply from: "http://dl.bintray.com/content/shemnon/javafx-gradle/0.3.0/javafx.plugin"
+apply plugin: "groovy"
+
+mainClassName = "Main"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.codehaus.groovy:groovy-all:2.2.1'
+}
+
+javafx {
+    mainClass = "Main"
+    javaRuntime = '/opt/java7/jre'
+}
